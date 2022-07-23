@@ -1,13 +1,11 @@
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Observable;
 import java.util.Observer;
 
 public class Borsa extends Observable {
 
 	private ArrayList<Suscriptor> suscriptors;
-	private int saldoActual;
-	private int saldoNou;
+	private int saldo;
 
 	private Observer observer;
 
@@ -18,11 +16,11 @@ public class Borsa extends Observable {
 
 //Getters&Setters
 	public int getSaldo() {
-		return saldoActual;
+		return saldo;
 	}
 
 	public void setSaldo(int saldo) {
-		this.saldoActual = saldo;
+		this.saldo = saldo;
 		notificaSuscriptors();
 	}
 
